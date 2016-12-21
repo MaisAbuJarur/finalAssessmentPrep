@@ -32,3 +32,53 @@
  */
 
 //writ your code here .....
+
+function Player (name){
+	var player= {};
+	player.name= name;
+	player.addInfo = addInfo;
+	player.age= undefined;
+	player.position= undefined;
+	player.level = 0;
+	player.abvailability = false;
+	player.increaseLevel = increaseLevel;
+	player.isAvailable = isAvailable;
+return player;
+}
+
+
+var addInfo = function (age, position, level, availability) {
+		var that = this
+		return {
+		age : age,
+		position :  position,
+		level : level,
+		availability :availability
+		}
+}
+
+var increaseLevel = function (n){
+	return this.player.level + n;
+
+}
+
+var isAvailable = function (){
+	return (this.availability);
+}
+
+var arrayOfPlayers =[]
+var player1 = Player ("Jony")
+player.addInfo ()
+
+function decreaseLevel (arrayOfPlayers) {
+	for(var i = 0; i< arrayOfPlayers; i++){
+		for(var key in i){
+			if (player.age > 30) {
+				player.level = player.level - 1  
+			}
+		}
+	}
+}
+function sortPlayersBy (arrayOfPlayers, key){
+	
+}

@@ -14,6 +14,30 @@
 */
 // write your code here ...
 
+function factory (name, age, education, nationality){
+	return {
+		name : name,
+		age : age,
+		education :education,
+		nationality : nationality
+	}
+}
+
+var friend1 = factory ("Bayan", 28, "computer science", "Jordanian")
+var friend2 = factory ("Noor", 23, "computer science","Jordanian")
+var cohort2 = [friend1, friend2]
+
+function showFriends (friend){
+	return friend.name + " with the age of " + friend.age + " and with " + friend.education + "education " 
+}
+
+function averageStudents(cohort2){
+	result = 0
+	cohort2.forEach(function(element){
+		result += element.age
+	})
+	return result/cohort2.length
+}
 
 
 
@@ -25,7 +49,18 @@
 	rangeSquared(2,10)// [4,16,12,16,100];
 */
 // write your code here ...
-
+function square (n) {
+	return n*n
+}
+function rangeSquared (x,y){
+	var result = [];
+	for(var i = 0; i <= y; i++){
+		if(i %2 === 0){
+			result.push(square(i))
+		}
+	}
+	return result;
+}
 
 
 
@@ -33,6 +68,14 @@
  	Example:
 	leader([98, 20, 30, 5, 11, 27]) // output: [98, 30, 27]
 */
-
+function leaders (array){
+	var result = [];
+	for(var i = 0; i < array.length; i++){
+		if( i > array[i+1]){
+			result.push(i);
+		}
+	}
+	return result;
+}
 // write your code here ....
 
